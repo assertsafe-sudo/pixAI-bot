@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>pixAI</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="space">
+    <div class="nebula n1" data-depth="0.12"></div>
+    <div class="nebula n2" data-depth="0.22"></div>
+    <div class="crystal c1" data-depth="0.4"></div>
+    <div class="crystal c2" data-depth="0.55"></div>
+    <div class="crystal c3" data-depth="0.3"></div>
+    <div class="stars"></div>
+  </div>
+
+  <header class="nav">
+    <div class="brand">pixAI</div>
+    <div class="nav-links">
+      <a href="#home">Главная</a>
+      <a href="#how">Как работает</a>
+      <a href="#models">Модели</a>
+    </div>
+    <span class="hello" id="user-hello">Mini App</span>
+  </header>
+
+  <main id="scroller">
+    <section class="panel hero" id="home">
+      <div class="hero-copy" data-depth="0.08">
+        <h1>pix<br /><span>AI</span></h1>
+        <p>Искусственный интеллект для повседневных задач. Три модели — ChatGPT, Grok и Gemini.</p>
+        <div class="hero-actions">
+          <a class="btn glow" href="#models">Выбрать модель</a>
+          <a class="btn line" href="#how">Как работает pixAI</a>
+        </div>
+      </div>
+      <div class="hero-orb" data-depth="0.25"></div>
+    </section>
+
+    <section class="panel how" id="how">
+      <h2>Как работает</h2>
+      <div class="title-frame">pixAI</div>
+      <div class="how-grid">
+        <article class="step">
+          <b class="num">1</b>
+          <h3>Выберите модель</h3>
+          <p>ChatGPT, Grok или Gemini — одна кнопка, один чат.</p>
+        </article>
+        <div class="idol" aria-hidden="true"></div>
+        <article class="step">
+          <b class="num">2</b>
+          <h3>Напишите запрос</h3>
+          <p>Текст, идея, код или правка — без переключения ботов.</p>
+        </article>
+        <article class="step wide">
+          <b class="num">3</b>
+          <h3>Получите ответ</h3>
+          <p>Стриминг в Mini App. Позже сюда же подключается backend.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel models" id="models">
+      <h2>Модели</h2>
+      <div class="title-frame">pixAI</div>
+      <div class="model-row">
+        <button class="model" data-id="gpt" type="button">
+          <span class="dot gpt"></span>
+          <strong>ChatGPT</strong>
+          <small>универсальный текст</small>
+        </button>
+        <button class="model" data-id="grok" type="button">
+          <span class="dot grok"></span>
+          <strong>Grok</strong>
+          <small>прямой стиль</small>
+        </button>
+        <button class="model" data-id="gemini" type="button">
+          <span class="dot gemini"></span>
+          <strong>Gemini</strong>
+          <small>поиск и файлы</small>
+        </button>
+      </div>
+    </section>
+
+    <section class="panel chat-sec" id="chat">
+      <h2 id="chat-title">Чат</h2>
+      <p class="sub" id="chat-sub">сначала выберите модель</p>
+      <div class="messages" id="messages"></div>
+      <form class="composer" id="composer">
+        <input id="prompt" type="text" placeholder="Напишите запрос…" autocomplete="off" />
+        <button type="submit">➤</button>
+      </form>
+    </section>
+
+    <section class="panel cta" id="cta">
+      <p>Готовы начать?</p>
+      <a class="btn glow fat" href="#models">Хочу попробовать</a>
+    </section>
+  </main>
+
+  <div class="tape" aria-hidden="true">
+    <div class="tape-track">
+      <span>НЕЙРОСЕТЬ</span><span>pixAI</span><span>ChatGPT</span><span>Grok</span><span>Gemini</span>
+      <span>НЕЙРОСЕТЬ</span><span>pixAI</span><span>ChatGPT</span><span>Grok</span><span>Gemini</span>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
